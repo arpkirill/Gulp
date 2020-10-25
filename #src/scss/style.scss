@@ -1,0 +1,23 @@
+@import "nullstyle";
+
+$fz:50px;
+
+%tplborder{
+    border-bottom: 5px dashed red;
+    margin: 100px;
+}
+
+@mixin fontz($f){
+    font-size: $f;
+}
+
+body {
+    font-size: $fz;
+    background: rgb(255, 255, 255);
+}
+
+.link{
+    @include fontz(300px);
+    color: rgb(170, 148, 148);
+    @extend %tplborder;
+}
